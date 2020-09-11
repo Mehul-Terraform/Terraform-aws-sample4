@@ -37,6 +37,6 @@ route {
 
 }
 resource "aws_route_table_association" "subnet-association" {
-  subnet_id      = "${aws_subnet.KCS-AWS-TF.id}"
-  route_table_id = "${aws_route_table.KCS-AWS-TF.id}"
+  subnet_id      = aws_subnet.KCS-AWS-TF.id
+  route_table_id = aws_route_table.KCS-AWS-TF.id
 }
