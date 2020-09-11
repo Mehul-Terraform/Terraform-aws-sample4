@@ -1,10 +1,4 @@
-#resource "tls_private_key" "this" {
-#  algorithm = "RSA"
-#}
-
-#module "key_pair" {
-#  source = "terraform-aws-modules/key-pair/aws"
-
-#  key_name   = "KCS-AWS-TF-KeyPair"
-#  public_key = tls_private_key.this.public_key_openssh
-#}
+resource "aws_key_pair" "KCS-AWS-TF-KeyPair" {
+  key_name   = "KCS-AWS-TF-KeyPair"
+  public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDcc5N7Yt8RcEbzWQTPb/lCeMJfL4u/Iq04fKbmFergZGLMbjIIhLMhhPNMN13TmQ7ChXjrqpmeFPRYuUl4WhmdgcGfL+MRvyoG+lEoKKa1LqHCzUEogNqpAYgLwy36OT0ebu41a5JyvKsJTupWx3mHtClzn5uFBJ2v0dVHNqIpushrWN0DX/yHjJUNf6zAldmk6JZ8eKS6RTOZi+7brJ19wQ7ojgraD2rQbU8eUD6g5w+nT3vn655/v/eNV288GqdV3XZ6K9R2eFDtMe+2mb0NjJETnlcuJmWKP13tMTrjYV5RtWXOoK+Y2Wmw21JKLKDhKnPGP8fpngUOQ2qfiVPX ubuntu@DESKTOP-4RFREOA"
+}
