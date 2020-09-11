@@ -32,7 +32,7 @@ resource "aws_route_table" "KCS-AWS-TF" {
   
 route {
     cidr_block = "0.0.0.0/0"
-    gateway_id = "${aws_internet_gateway.KCS-AWS-TF.id}"
+    gateway_id = aws_internet_gateway.KCS-AWS-TF.id
   }
 
 }
